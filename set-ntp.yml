@@ -1,0 +1,4 @@
+- hosts: all
+  roles:
+    - role: ntp
+      ntp_config_server: [time.google.com]
