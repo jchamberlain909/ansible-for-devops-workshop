@@ -3,4 +3,7 @@
   become: yes
   
   roles:
-    - apache-simple
+    - role: apache-simple
+    - role: ntp
+      vars:
+        ntp_config_server: ['time.google.com'] 
