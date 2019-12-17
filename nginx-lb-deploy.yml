@@ -3,11 +3,9 @@
   become: yes
 
   tasks:
-  - name: install docker preqequisities
-    pip:
-      name: docker
-
-  tasks:
+    - name: install docker preqequisities
+      pip:
+        name: docker
     - name: launch nginx-lb container on lb nodes
       docker_container:
         name: nginx-lb
